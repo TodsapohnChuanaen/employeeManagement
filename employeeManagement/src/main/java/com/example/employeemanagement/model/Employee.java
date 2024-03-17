@@ -1,17 +1,14 @@
 package com.example.employeemanagement.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Employee {
 
     @Id
     @GeneratedValue(strategy =  GenerationType.IDENTITY)
-    private int id;
-    private String firstName;
+    private int id;  //@Column(length = 5)
+    private String firstName;  //can add @Column(name = "fn") for change name in database
     private String lastName;
     private String email;
 

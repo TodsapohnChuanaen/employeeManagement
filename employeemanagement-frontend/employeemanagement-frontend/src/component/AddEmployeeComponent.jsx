@@ -22,10 +22,14 @@ const AddEmployeeComponent = () => {
                 EmployeeService.updateEmployee(id, employeeData)
                     .then(navigate("/employee"))
                     .catch(e => console.log(e));
+                    const reload = window.location.reload(false);
+                    alert("updated successfully");
             } else {
                 EmployeeService.saveEmployee(employeeData)
                     .then(navigate("/employee"))
                     .catch(e => console.log(e));
+                    const reload = window.location.reload(false);
+                    alert("added successfully");
             }
 
         } else {
